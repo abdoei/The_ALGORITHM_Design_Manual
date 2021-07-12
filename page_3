@@ -1,0 +1,18 @@
+///---------------------------------------------------------
+///   Name:           Insertion sort
+///   Description:    <Description>
+///   Author:         abdo eid                    Date: 12 7 2021
+///   Notes:          <Notes>
+///---------------------------------------------------------
+
+void insertionSort(int a[], int n)
+{
+	for(int i = 1; i < n;i++) // suppose the first element(of index 0) is sorted
+	{
+		int x = a[i]; // x is the element to be inserted
+		int j = i - 1;
+		for(; j >= 0 && a[j]>x; j--)
+			a[j+1] = a[j]; // make a place for x, the place is of index (j)
+		a[j+1] = x; // insert x in the index (j+1) because (j) underwent j-- of the for loop
+	}
+}
