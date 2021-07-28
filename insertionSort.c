@@ -49,11 +49,13 @@ int main()
     int lastj = 0;	// For each iteration of the the outer for loop,in the inner loop if the program entered the 
     				// "if body" we want to know where the moving of elements stopped to insert the proper element
 	int active = 0;	// To know if any changes happened to the array in this whole outer iteration to make the insertion
-    for (int i = 1; i < n - 1; i++)	// for each of the unsorted elements
+    int i = 1, j, temp;
+	for (; i < n - 1; i++)	// for each of the unsorted elements
     {
-        int temp = arr[i + 1];		// hold the value of the first unsorted element as it is going to be overwritten
+        temp = arr[i + 1];		// hold the value of the first unsorted element as it is going to be overwritten
         active = 0;					// to know if the program entered the if body or not in the whole outer iteration
-        for (int j = i; j >= 0; j--)
+        j = i
+		for (; j >= 0; j--)
         {
             if (arr[j] > temp)
             {
